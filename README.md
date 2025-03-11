@@ -11,6 +11,10 @@ SSUMC 8기 iOS 스터디 B조
 ## branch 컨벤션 (규칙)
 
 ```zsh
+├─main
+    ├─egg/main
+    │  └─egg/week1
+    │  └─egg/week2
 ```
 
 1. `main/닉네임 브랜치`가 기본 브랜치로 pr 보낼 때 main 브랜치가 아닌 `main/닉네임` 브랜치로 올립니다.
@@ -20,9 +24,15 @@ SSUMC 8기 iOS 스터디 B조
 ## 디렉터리 컨벤션 (규칙)
 
 ``` zsh
+├─닉네임
+    ├─Week1
+    │  └─Week1_Mission.xcodeproj
+    ├─Week2
+    │  └─Week2_Mission.xcodeproj
 ```
 
 ## 커밋 컨벤션 (규칙)
 
 ``` zsh
+[egg/week1] 내용
 ```
