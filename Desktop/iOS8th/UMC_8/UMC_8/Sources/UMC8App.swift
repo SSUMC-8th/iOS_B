@@ -4,7 +4,8 @@ import SwiftUI
 struct UMC8App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
+            
         }
     }
 }
