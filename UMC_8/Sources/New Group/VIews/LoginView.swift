@@ -35,10 +35,10 @@ struct LoginView: View {
                     .frame(width: 97, height: 95)
                 Spacer().frame(height: 29)
                 Text("안녕하세요.\n스타벅스입니다!")
-                    .font(.PretendardExtraBold24)
+                    .font(Font.PretendardBold24)
                     .padding(.bottom, 15)
                 Text("회원 서비스 이용을 위해 로그인 해주세요")
-                    .font(.PretendardMedium16)
+                    .font(Font.PretendardMedium16)
                     .foregroundStyle(Color(.gray))
             }
             .frame(maxWidth: 402, minHeight: 270, alignment: .leading)
@@ -51,7 +51,7 @@ struct LoginView: View {
             VStack {
                 TextField("아이디", text: $id)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .font(.PretendardRegular13)
+                    .font(Font.PretendardRegular13)
                 Divider()
                 Spacer().frame(height: 20)
                 SecureField("비밀번호", text: $password)
