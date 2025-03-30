@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "_카카오 로그인.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "_카카오 로그인 1.png",
+      "filename" : "icon5.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
