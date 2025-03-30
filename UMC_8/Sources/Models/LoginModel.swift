@@ -6,9 +6,11 @@
 //
 
 
+
 import Foundation
 
-struct LoginModel {
-    var id: String
-    var pwd: String
+struct User {
+    let id: String
+    let password: String
 }
+
