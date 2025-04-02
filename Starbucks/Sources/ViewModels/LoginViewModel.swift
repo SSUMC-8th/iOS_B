@@ -41,3 +41,4 @@ class LoginViewModel: ObservableObject {
         errorMessage = nil
     }
 }
+
