@@ -9,6 +9,9 @@ class LoginViewModel {
 
 struct LoginView: View {
     @State private var viewModel = LoginViewModel()
+    @AppStorage("savedEmail") private var savedEmail: String = ""
+    @AppStorage("savedPassword") private var savedPassword: String = ""
+    @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
 
     var body: some View {
         VStack(spacing: 32) {
@@ -41,7 +44,7 @@ struct LoginView: View {
                 VStack(alignment: .leading) {
                     Text("비밀번호")
                         .font(.mainTextRegular13)
-                    TextField("", text: $viewModel.password)
+                    SecureField("", text: $viewModel.password)
                         .padding(.bottom, 4)
                     Divider()
                 }
@@ -50,7 +53,11 @@ struct LoginView: View {
 
             VStack(spacing: 104) {
                 Button(action: {
-                    print("로그인하기 버튼 클릭")
+                    if viewModel.id == savedEmail && viewModel.password == savedPassword {
+                        isLoggedIn = true
+                    } else {
+                        print("로그인 실패")
+                    }
                 }) {
                     Text("로그인하기")
                         .font(.mainTextMedium16)
@@ -61,9 +68,7 @@ struct LoginView: View {
                         .cornerRadius(8)
                 }
 
-                Button(action: {
-                    print("이메일로 회원가입 클릭")
-                }) {
+                NavigationLink(destination: SignupView()) {
                     Text("이메일로 회원가입하기")
                         .font(.mainTextRegular12)
                         .foregroundColor(.gray)
@@ -94,9 +99,15 @@ struct LoginView: View {
             Spacer()
         }
         .padding(.top, 40)
+        .onAppear {
+            viewModel.id = savedEmail
+            viewModel.password = savedPassword
+        }
     }
 }
 
 #Preview {
-    LoginView()
+    NavigationStack {
+        LoginView()
+    }
 }

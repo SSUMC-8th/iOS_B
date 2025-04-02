@@ -10,7 +10,7 @@ struct StarbucksTabView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
 
-            Color.white
+            HomeView()
                 .ignoresSafeArea()
                 .tabItem {
                     VStack {
@@ -30,7 +30,6 @@ struct StarbucksTabView: View {
                             .renderingMode(.original)
                             .resizable()
                             .frame(width: 30, height: 30)
-
                     }
                 }
                 .tag(Tab.pay)
