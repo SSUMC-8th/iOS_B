@@ -11,4 +11,5 @@ struct SignupModel {
     var nickname: String
     var id: String
     var password: String
+    
 }

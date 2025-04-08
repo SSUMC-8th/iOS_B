@@ -7,6 +7,36 @@
 
 import SwiftUI
 
+struct signupNavigationView: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationStack{
+            HStack{
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Image("chevron-left")
+                        .resizable()
+                        .frame(width: 24, height: 24)
+                        
+                })
+                Spacer()
+                Text("가입하기")
+                    .font(Font.Pretend.pretendardMedium(size: 16))
+                Spacer()
+                
+                // 👉 오른쪽에 같은 크기의 빈 공간으로 균형 맞추기
+                // (투명 뷰로, 왼쪽 버튼과 같은 너비를 차지)
+                Color.clear
+                    .frame(width: 24, height: 24)
+            }
+        }
+        .navigationBarBackButtonHidden(true) // 자동으로 생기는 Back 버튼 비활성화
+
+    }
+}
+
 struct UserInfoView: View {
     @ObservedObject var signUpViewModel: SignupViewModel // 전달 받기
     
@@ -48,7 +78,9 @@ struct SubmitBtnView: View {
         Button(action: {
             signUpViewModel.signup()
             nickname = signUpViewModel.signupModel.nickname
-            isSignedUp = true
+            if !signUpViewModel.showAlert{ // 모든 값이 1자 이상인 경우
+                isSignedUp = true
+            }
         }, label: {
             Text("생성하기")
                 .foregroundStyle(Color.white)
@@ -60,6 +92,9 @@ struct SubmitBtnView: View {
                     .fill(Color(hex: "#01A862"))
                 )
         })
+        .alert(isPresented: $signUpViewModel.showAlert) {
+            Alert(title: Text("입력 오류"), message: Text("모든 항목을 입력해주세요."), dismissButton: .default(Text("확인")))
+        }
 
     }
 }
@@ -70,6 +105,7 @@ struct EmailSignupView: View {
     var body: some View {
         NavigationStack{
             VStack(){
+                signupNavigationView()
                 Spacer().frame(height: 210)
                 UserInfoView(signUpViewModel: signUpViewModel)
                 Spacer()
@@ -84,6 +120,9 @@ struct EmailSignupView: View {
     }
 }
 
+
+
 #Preview {
     EmailSignupView()
 }
+

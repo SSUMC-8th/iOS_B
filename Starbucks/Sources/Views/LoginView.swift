@@ -51,12 +51,15 @@ struct InputLoginView: View {
             Spacer().frame(height: 47)
             
             Button(action: {
-                        print("Hello")
+                viewModel.login()
             }, label: {
                 Text("로그인하기")
                     .foregroundStyle(Color.white)
                     .frame(maxWidth: 402, maxHeight: 46)
             })
+            .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
+                StarbucksTabView()
+                    }
             .frame(width: 402, height: 46)
             .buttonStyle(.borderedProminent) // 버튼 스타일 적용
             .tint(Color(hex: "#01A862")) // 버튼 색상 적용

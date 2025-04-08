@@ -176,7 +176,7 @@ struct PayView: View {
                     )
   //                  .padding(.vertical, 16)
                     
-                }.frame(maxWidth: 418)
+                }
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -214,7 +214,7 @@ struct CSView: View {
                     )
                     .padding(.vertical, 16)
                     
-                }.frame(maxWidth: 418)
+                }
             }
             
             PayAndCSButton(title: "마이 스타벅스 리뷰", imageName: "CSicon5", width:24, height: 24)

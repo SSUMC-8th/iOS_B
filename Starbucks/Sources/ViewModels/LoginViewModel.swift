@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var id: String = ""
@@ -15,14 +16,16 @@ class LoginViewModel: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var errorMessage: String?
 
+    // 저장된 사용자 정보 (UserDefaults 기반)
+    @AppStorage("user_email") private var storedID: String = ""
+    @AppStorage("user_password") private var storedPassword: String = ""
+
     var isValid: Bool {
         !id.isEmpty && !password.isEmpty
     }
 
     func login() {
-        let dummyUser = User(id: "test", password: "1234")
-
-        if id == dummyUser.id && password == dummyUser.password {
+        if id == storedID && password == storedPassword {
             isLoggedIn = true
             errorMessage = nil
         } else {
@@ -38,3 +41,4 @@ class LoginViewModel: ObservableObject {
         errorMessage = nil
     }
 }
+

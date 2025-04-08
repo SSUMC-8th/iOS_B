@@ -13,7 +13,7 @@ struct StarbucksTabView: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $selectedTab) {
-                Text("홈 화면")
+                HomeView()
                     .tag("Home")
 
                 Text("결제 화면")
