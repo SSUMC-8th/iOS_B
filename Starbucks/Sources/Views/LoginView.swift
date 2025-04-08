@@ -59,7 +59,7 @@ struct InputLoginView: View {
             })
             .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
                 StarbucksTabView()
-                    }
+            }
             .frame(width: 402, height: 46)
             .buttonStyle(.borderedProminent) // 버튼 스타일 적용
             .tint(Color(hex: "#01A862")) // 버튼 색상 적용
@@ -149,3 +149,4 @@ struct SignUpView: View {
     MainLoginView()
         
 }
+

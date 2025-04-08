@@ -7,6 +7,8 @@
 
     import SwiftUI
 
+    
+
     struct TemperatureToggleView: View {
         @Binding var selected: CoffeeTemperature
         let option: CoffeeTemperatureOption
@@ -80,60 +82,78 @@
                 return coffee.iced
             }
         }
+        @Environment(\.dismiss) private var dismiss
 
         var body: some View {
-            VStack(alignment: .leading) {
-                if let variant = currentVariant {
-                    Image(variant.imageName)
-                        .resizable()
-                        .scaledToFit()
-
-                    HStack {
-                        Text(variant.menuName)
-                            .font(Font.Pretend.pretendardSemiBold(size: 24))
-                            .foregroundStyle(Color("black03"))
-                            .padding(.vertical)
-                            .padding(.leading)
-
-                        Image("new")
+            VStack {
+                VStack(alignment: .leading) {
+                    if let variant = currentVariant {
+                        ZStack(alignment: .top)  {
+                            Image(variant.imageName)
+                                .resizable()
+                                .scaledToFit()
+                            
+                            HStack {
+                                Button(action:{dismiss()}){
+                                    Image("back")
+                                }
+                                Spacer()
+                                Button(action:{}){
+                                    Image("share")
+                                }
+                            }.padding()
+                        }
+                        
+                        HStack {
+                            Text(variant.menuName)
+                                .font(Font.Pretend.pretendardSemiBold(size: 24))
+                                .foregroundStyle(Color("black03"))
+                                .padding(.vertical)
+                                .padding(.leading)
+                            
+                            Image("new")
+                        }
+                        
+                        Text(variant.enMenuName)
+                            .font(Font.Pretend.pretendardSemiBold(size: 14))
+                            .foregroundStyle(Color("gray01"))
+                            .padding(.horizontal)
+                        
+                        Text(variant.description)
+                            .font(Font.Pretend.pretendardMedium(size: 14))
+                            .foregroundStyle(Color("gray06"))
+                            .padding()
+                        
+                        Text(variant.price)
+                            .font(Font.Pretend.pretendardLight(size: 24))
+                            .padding(.horizontal)
                     }
-
-                    Text(variant.enMenuName)
-                        .font(Font.Pretend.pretendardSemiBold(size: 14))
-                        .foregroundStyle(Color("gray01"))
+                    
+                    TemperatureToggleView(selected: $selectedTemp, option: coffee.tempOption)
                         .padding(.horizontal)
-
-                    Text(variant.description)
-                        .font(Font.Pretend.pretendardMedium(size: 14))
-                        .foregroundStyle(Color("gray06"))
-                        .padding()
-
-                    Text(variant.price)
-                        .font(Font.Pretend.pretendardLight(size: 24))
-                        .padding(.horizontal)
+                    
+                    Spacer()
+                    
                 }
-
-                TemperatureToggleView(selected: $selectedTemp, option: coffee.tempOption)
-                    .padding(.horizontal)
-
-                Spacer()
-
+                .frame(maxWidth: .infinity, alignment: .leading)
+                Button(action: {
+                    print("주문하기: \(selectedTemp.rawValue)")
+                }) {
+                    Text("주문하기")
+                        .foregroundStyle(Color.white)
+                        .font(Font.Pretend.pretendardMedium(size: 16))
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 43)
+                }
+                .frame(width: 402, height: 43)
+                .buttonStyle(.borderedProminent)
+                .tint(Color("green00"))
+                .cornerRadius(20)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            Button(action: {
-                print("주문하기: \(selectedTemp.rawValue)")
-            }) {
-                Text("주문하기")
-                    .foregroundStyle(Color.white)
-                    .font(Font.Pretend.pretendardMedium(size: 16))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 43)
-            }
-            .frame(width: 402, height: 43)
-            .buttonStyle(.borderedProminent)
-            .tint(Color("green00"))
-            .cornerRadius(20)
+            .navigationBarBackButtonHidden(true) // back 버튼 비활성화
         }
+        
+        
     }
 
     #Preview {

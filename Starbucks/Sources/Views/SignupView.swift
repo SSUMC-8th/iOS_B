@@ -125,4 +125,3 @@ struct EmailSignupView: View {
 #Preview {
     EmailSignupView()
 }
-

@@ -10,10 +10,11 @@ let project = Project(
             bundleId: "io.tuist.Starbucks",
             infoPlist: .extendingDefault(
                 with: [
+                    "NSCameraUsageDescription": "카메라 기능을 사용하려면 권한이 필요합니다.",
                     "UILaunchScreen": [
                         "UIColorName": "",
-                        "UIImageName": "",
-                    ],
+                        "UIImageName": ""
+                    ]
                 ]
             ),
             sources: ["Starbucks/Sources/**"],
