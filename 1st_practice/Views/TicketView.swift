@@ -19,7 +19,6 @@ struct TicketView: View {
         .padding()
     }
     
-    /// 상단 Title VStack
     private var mainTitleGroup: some View {
         VStack {
             Group {
@@ -36,7 +35,6 @@ struct TicketView: View {
         .frame(height: 84)
     }
     
-    /// 하단 VStack
     private var mainBottomGroup: some View {
         Button(action: {
             print("Hello")
