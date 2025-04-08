@@ -9,11 +9,15 @@ import SwiftUI
 
 struct StarbucksTabView: View {
     @State private var selectedTab: String = "Home"
-
+    @State private var showAd = true
+    
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $selectedTab) {
                 HomeView()
+                    .sheet(isPresented: $showAd) {
+                                ChristmasAdvertise()
+                    }
                     .tag("Home")
 
                 Text("결제 화면")
@@ -22,7 +26,7 @@ struct StarbucksTabView: View {
                 Text("주문 화면")
                     .tag("Order")
 
-                Text("매장 화면")
+                ShopView()
                     .tag("Shop")
 
                 OtherView()

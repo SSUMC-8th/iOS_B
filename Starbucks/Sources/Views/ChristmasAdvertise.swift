@@ -13,8 +13,9 @@ struct ChristmasAdvertise: View {
     var body: some View {
         VStack{
             Image("Christmas_Advertisement")
+                .resizable()
                 .frame(maxWidth: .infinity)
-                .frame(height: 720)
+                .aspectRatio(contentMode: .fit)
             
             Spacer()
             
@@ -31,6 +32,7 @@ struct ChristmasAdvertise: View {
                                 .fill(Color(hex: "#01A862"))
                         )
                 })
+                .padding(.horizontal, 5)
                 HStack{
                     Spacer()
                     Button(action: {
@@ -40,6 +42,7 @@ struct ChristmasAdvertise: View {
                             .foregroundStyle(Color(hex: "#6B6B6B"))
                             .font(Font.Pretend.pretendardLight(size: 14))
                     })
+                    .padding()
                 }
             }
     }
@@ -48,4 +51,5 @@ struct ChristmasAdvertise: View {
         ChristmasAdvertise()
             .padding()
 }
+
 
