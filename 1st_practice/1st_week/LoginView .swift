@@ -8,7 +8,7 @@ class LoginViewModel {
 }
 
 struct LoginView: View {
-    @State private var viewModel = LoginViewModel()
+    @Bindable private var viewModel = LoginViewModel()
     @AppStorage("savedEmail") private var savedEmail: String = ""
     @AppStorage("savedPassword") private var savedPassword: String = ""
     @AppStorage("isLoggedIn") private var isLoggedIn: Bool = false
@@ -52,9 +52,11 @@ struct LoginView: View {
             .padding()
 
             VStack(spacing: 104) {
+
                 Button(action: {
                     if viewModel.id == savedEmail && viewModel.password == savedPassword {
                         isLoggedIn = true
+                        print("로그인 성공")
                     } else {
                         print("로그인 실패")
                     }

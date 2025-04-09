@@ -71,6 +71,7 @@ struct RectangleImageCard: View {
 struct HomeView: View {
     @State private var viewModel = HomeViewModel()
     @AppStorage("savedNickname") private var savedNickname: String = ""
+    @State private var isPopupPresented = true
 
     var body: some View {
         ScrollView {
@@ -163,9 +164,8 @@ struct HomeView: View {
             }
             .padding()
         }
+        .sheet(isPresented: $isPopupPresented) {
+            AdPopupView()
+        }
     }
-}
-
-#Preview {
-    HomeView()
 }
