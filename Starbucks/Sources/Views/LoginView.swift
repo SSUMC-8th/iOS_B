@@ -149,4 +149,3 @@ struct SignUpView: View {
     MainLoginView()
         
 }
-

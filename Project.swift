@@ -11,6 +11,8 @@ let project = Project(
             infoPlist: .extendingDefault(
                 with: [
                     "NSCameraUsageDescription": "카메라 기능을 사용하려면 권한이 필요합니다.",
+                    "NSLocationWhenInUseUsageDescription": "앱 사용 중 위치 정보 접근을 허용해 주세요",
+                    "NSLocationAlwaysUsageDescription": "앱이 백그라운드에서도 위치를 사용하려면 허용해 주세요",
                     "UILaunchScreen": [
                         "UIColorName": "",
                         "UIImageName": ""

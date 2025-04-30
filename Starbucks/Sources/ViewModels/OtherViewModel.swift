@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-struct OtherViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    OtherViewModel()
+enum StoreFindTab: String, CaseIterable {
+    case findStore = "매장 찾기"
+    case findRoute = "길찾기"
 }

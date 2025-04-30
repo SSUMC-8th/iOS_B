@@ -52,4 +52,3 @@ struct ChristmasAdvertise: View {
             .padding()
 }
 
-
