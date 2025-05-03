@@ -30,7 +30,7 @@ struct StarbucksTabView: View {
                 }
                 .tag(Tab.pay)
 
-            Color.white
+            OrderView()
                 .tabItem {
                     VStack {
                         Image(selectedTab == .order ? "icon3_1" : "icon3")
