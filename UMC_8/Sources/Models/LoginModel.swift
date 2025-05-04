@@ -2,7 +2,7 @@
 //  LoginModel.swift
 //  Starbucks
 //
-//  Created by 박현규 on 3/18/25.
+//  Created by 소민준 on 3/18/25.
 //
 
 import Foundation

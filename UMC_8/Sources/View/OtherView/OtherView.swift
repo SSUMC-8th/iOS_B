@@ -2,7 +2,7 @@
 //  OtherView.swift
 //  Starbucks
 //
-//  Created by 바견규 on 3/26/25.
+//  Created by 소민준 on 3/26/25.
 //
 //  OtherView.swift
 //  Starbucks App UI - Refactored for Scalability

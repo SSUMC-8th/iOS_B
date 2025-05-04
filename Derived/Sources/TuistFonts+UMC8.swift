@@ -19,20 +19,20 @@
 // MARK: - Fonts
 
 // swiftlint:disable identifier_name line_length type_body_length
-public enum UMC8FontFamily: Sendable {
+public enum StarbucksFontFamily: Sendable {
   public enum Pretendard: Sendable {
-    public static let black = UMC8FontConvertible(name: "Pretendard-Black", family: "Pretendard", path: "Pretendard-Black.otf")
-    public static let bold = UMC8FontConvertible(name: "Pretendard-Bold", family: "Pretendard", path: "Pretendard-Bold.otf")
-    public static let extraBold = UMC8FontConvertible(name: "Pretendard-ExtraBold", family: "Pretendard", path: "Pretendard-ExtraBold.otf")
-    public static let extraLight = UMC8FontConvertible(name: "Pretendard-ExtraLight", family: "Pretendard", path: "Pretendard-ExtraLight.otf")
-    public static let light = UMC8FontConvertible(name: "Pretendard-Light", family: "Pretendard", path: "Pretendard-Light.otf")
-    public static let medium = UMC8FontConvertible(name: "Pretendard-Medium", family: "Pretendard", path: "Pretendard-Medium.otf")
-    public static let regular = UMC8FontConvertible(name: "Pretendard-Regular", family: "Pretendard", path: "Pretendard-Regular.otf")
-    public static let semiBold = UMC8FontConvertible(name: "Pretendard-SemiBold", family: "Pretendard", path: "Pretendard-SemiBold.otf")
-    public static let thin = UMC8FontConvertible(name: "Pretendard-Thin", family: "Pretendard", path: "Pretendard-Thin.otf")
-    public static let all: [UMC8FontConvertible] = [black, bold, extraBold, extraLight, light, medium, regular, semiBold, thin]
+    public static let black = StarbucksFontConvertible(name: "Pretendard-Black", family: "Pretendard", path: "Pretendard-Black.otf")
+    public static let bold = StarbucksFontConvertible(name: "Pretendard-Bold", family: "Pretendard", path: "Pretendard-Bold.otf")
+    public static let extraBold = StarbucksFontConvertible(name: "Pretendard-ExtraBold", family: "Pretendard", path: "Pretendard-ExtraBold.otf")
+    public static let extraLight = StarbucksFontConvertible(name: "Pretendard-ExtraLight", family: "Pretendard", path: "Pretendard-ExtraLight.otf")
+    public static let light = StarbucksFontConvertible(name: "Pretendard-Light", family: "Pretendard", path: "Pretendard-Light.otf")
+    public static let medium = StarbucksFontConvertible(name: "Pretendard-Medium", family: "Pretendard", path: "Pretendard-Medium.otf")
+    public static let regular = StarbucksFontConvertible(name: "Pretendard-Regular", family: "Pretendard", path: "Pretendard-Regular.otf")
+    public static let semiBold = StarbucksFontConvertible(name: "Pretendard-SemiBold", family: "Pretendard", path: "Pretendard-SemiBold.otf")
+    public static let thin = StarbucksFontConvertible(name: "Pretendard-Thin", family: "Pretendard", path: "Pretendard-Thin.otf")
+    public static let all: [StarbucksFontConvertible] = [black, bold, extraBold, extraLight, light, medium, regular, semiBold, thin]
   }
-  public static let allCustomFonts: [UMC8FontConvertible] = [Pretendard.all].flatMap { $0 }
+  public static let allCustomFonts: [StarbucksFontConvertible] = [Pretendard.all].flatMap { $0 }
   public static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }
@@ -41,7 +41,7 @@ public enum UMC8FontFamily: Sendable {
 
 // MARK: - Implementation Details
 
-public struct UMC8FontConvertible: Sendable {
+public struct StarbucksFontConvertible: Sendable {
   public let name: String
   public let family: String
   public let path: String
@@ -85,8 +85,8 @@ public struct UMC8FontConvertible: Sendable {
   }
 }
 
-public extension UMC8FontConvertible.Font {
-  convenience init?(font: UMC8FontConvertible, size: CGFloat) {
+public extension StarbucksFontConvertible.Font {
+  convenience init?(font: StarbucksFontConvertible, size: CGFloat) {
     #if os(iOS) || os(tvOS) || os(watchOS) || os(visionOS)
     if !UIFont.fontNames(forFamilyName: font.family).contains(font.name) {
       font.register()
@@ -102,3 +102,4 @@ public extension UMC8FontConvertible.Font {
 }
 // swiftlint:enable all
 // swiftformat:enable all
+
