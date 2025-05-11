@@ -23,7 +23,7 @@ struct StarbucksTabView: View {
                 Text("결제 화면")
                     .tag("Pay")
 
-                Text("주문 화면")
+                OrderTotalView()
                     .tag("Order")
 
                 ShopView()
@@ -67,3 +67,5 @@ struct StarbucksTabView: View {
 #Preview {
     StarbucksTabView()
 }
+
+

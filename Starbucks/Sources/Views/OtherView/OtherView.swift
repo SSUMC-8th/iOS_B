@@ -4,33 +4,50 @@
 //
 //  Created by 바견규 on 3/26/25.
 //
+//  OtherView.swift
+//  Starbucks App UI - Refactored for Scalability
+//  OtherView.swift
+//  Starbucks App UI - Refactored for Scalability
 
 import SwiftUI
-//상단바 뷰
+
+// MARK: - ButtonItem 모델
+struct ButtonItem: Identifiable {
+    let id = UUID()
+    let title: String
+    let imageName: String
+    let width: CGFloat?
+    let height: CGFloat?
+    let destination: AnyView?
+}
+
+// MARK: - 상단바
 struct UpperView: View {
     @AppStorage("nickname") var nickname: String = ""
-    
+
     var body: some View {
-        HStack{
+        HStack {
             Text("Other")
                 .font(Font.Pretend.pretendardBold(size: 24))
             Spacer()
-            Button(action:{print("로그아웃")}){Image("logout")}
-                .frame(width: 35,height: 35)
+            Button(action: { print("로그아웃") }) {
+                Image("logout")
+            }
+            .frame(width: 35, height: 35)
         }
         .padding(.horizontal)
     }
 }
-//환영합니다view
+
+// MARK: - 환영 메시지
 struct WelcomeNameView: View {
     @AppStorage("nickname") var nickname: String = ""
-    
+
     var body: some View {
         HStack {
             (
                 Text(nickname.isEmpty ? "(작성한 닉네임)" : nickname)
-                    .foregroundStyle(Color(hex: "#00B375"))
-                +
+                    .foregroundStyle(Color(hex: "#00B375")) +
                 Text(" 님\n 환영합니다. 🙌🏻")
                     .foregroundStyle(.primary)
             )
@@ -39,44 +56,91 @@ struct WelcomeNameView: View {
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .padding()
-
     }
 }
 
-//상단 버튼 뷰(별 히스토리, 전자영수증, 나만의 메뉴
-struct UpperButtonView: View {
+// MARK: - 재사용 가능한 버튼 뷰
+struct ReusableButton: View {
+    let item: ButtonItem
+
+    var body: some View {
+        Group {
+            if let destination = item.destination {
+                NavigationLink(destination: destination) {
+                    buttonContent
+                }
+            } else {
+                Button(action: { print(item.title) }) {
+                    buttonContent
+                }
+            }
+        }
+    }
+
+    private var buttonContent: some View {
+        HStack {
+            Image(item.imageName)
+                .resizable()
+                .frame(width: item.width, height: item.height)
+                .frame(maxWidth: 32, minHeight: 32)
+
+            Text(item.title)
+                .font(Font.Pretend.pretendardSemiBold(size: 16))
+                .foregroundStyle(Color(hex: "#111111"))
+
+            Spacer()
+        }
+        .padding(.horizontal, 12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(height: 32)
+    }
+}
+
+// MARK: - 버튼 그룹 뷰
+struct ButtonGroupView: View {
+    let title: String
+    let items: [[ButtonItem]]
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(title)
+                .font(Font.Pretend.pretendardSemiBold(size: 18))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+
+            ForEach(items, id: \.[0].id) { row in
+                HStack {
+                    ReusableButton(item: row[0])
+                        .padding(.vertical, 16)
+                    Spacer()
+                    ReusableButton(item: row[1])
+                        .padding(.vertical, 16)
+                }
+            }
+        }
+    }
+}
+
+// MARK: - 상단 액션 버튼 뷰
+struct TopActionButtons: View {
     @Environment(\.modelContext) var modelContext
     
-    
     var body: some View {
+        
+        let topButtons: [ButtonItem] = [
+                    ButtonItem(title: "별 히스토리", imageName: "myStar", width: 30, height: 30, destination: nil),
+                    ButtonItem(
+                        title: "전자영수증",
+                        imageName: "myReceipt",
+                        width: 30,
+                        height: 30,
+                        destination: AnyView(OtherReceiptView(modelContext: modelContext))
+                    ),
+                    ButtonItem(title: "나만의 메뉴", imageName: "mymenu", width: 48, height: 48, destination: nil)
+                ]
         HStack {
-            ForEach(buttonData, id: \.title) { data in
-                if data.title == "전자영수증" {
-                    NavigationLink(destination: {
-                        // 여기서 ModelContext 넘기기
-                        OtherReceiptView(modelContext: modelContext)
-                    }) {
-                        OtherActionButton(
-                            title: data.title,
-                            imageName: data.imageName,
-                            width: data.width,
-                            height: data.height
-                        )
-                        .frame(width: 102, height: 108)
-                        .background(Color.white)
-                        .cornerRadius(15)
-                    }
-                } else {
-                    OtherActionButton(
-                        title: data.title,
-                        imageName: data.imageName,
-                        width: data.width,
-                        height: data.height
-                    )
-                    .frame(width: 102, height: 108)
-                    .background(Color.white)
-                    .cornerRadius(15)
-                }
+            ForEach(topButtons) { item in
+                ReusableTopButton(item: item)
             }
         }
         .frame(width: 327, height: 108)
@@ -84,22 +148,33 @@ struct UpperButtonView: View {
     }
 }
 
-
-struct OtherActionButton: View {
-    let title: String
-    let imageName: String
-    let width: CGFloat?
-    let height: CGFloat?
+struct ReusableTopButton: View {
+    let item: ButtonItem
 
     var body: some View {
+        Group {
+            if let destination = item.destination {
+                NavigationLink(destination: destination) {
+                    topButtonContent
+                }
+            } else {
+                topButtonContent
+            }
+        }
+        .frame(width: 102, height: 108)
+        .background(Color.white)
+        .cornerRadius(15)
+    }
+
+    private var topButtonContent: some View {
         VStack {
-            Image(imageName)
+            Image(item.imageName)
                 .resizable()
-                .frame(width: width, height: height)
+                .frame(width: item.width, height: item.height)
                 .frame(height: 48)
                 .frame(maxWidth: .infinity, alignment: .center)
 
-            Text(title)
+            Text(item.title)
                 .font(Font.Pretend.pretendardSemiBold(size: 16))
                 .foregroundStyle(Color(hex: "#111111"))
         }
@@ -107,167 +182,55 @@ struct OtherActionButton: View {
     }
 }
 
-
-struct PayAndCSButton: View{
-    let title: String
-    let imageName: String
-    let width: CGFloat?
-    let height: CGFloat?
-
+// MARK: - 메인 OtherView
+struct OtherView: View {
     var body: some View {
-            
-        
-        Button(action: {
-            print(title)
-        }) {
-            HStack {
-                Image(imageName)
-                    .resizable()
-                    .frame(width: width, height: height) // 이미지 실제 사이즈
-                    .frame(maxWidth: 32, minHeight: 32)
-                
-                
-                
-                Text(title)
-                    .font(Font.Pretend.pretendardSemiBold(size: 16))
-                    .foregroundStyle(Color(hex: "#111111"))
-
-                
-                Spacer()
-            }
-            .padding(.horizontal,12)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .frame(height: 32)
-            
-        }
-    }
-}
-
-let buttonData: [(title: String, imageName: String, width: CGFloat?, height: CGFloat?)] = [
-    ("별 히스토리", "myStar", width: 30, height: 30),
-    ("전자영수증", "myReceipt", width: 30, height: 30),
-    ("나만의 메뉴", "mymenu", width: 48, height: 48)
-]
-
-let payButtonData: [[(title: String, imageName: String, width: CGFloat?, height: CGFloat?)]] = [
-    [("스타벅스 카드 등록", "Payicon1", width: 24, height: 16),
-     ("카드 교환권 등록", "Payicon2", width: 26, height: 23)],
-    [("쿠폰 등록", "Payicon3", width: 24, height: 18),
-     ("쿠폰 히스토리", "Payicon4", width: 26, height: 23)]
-]
-
-let CSButtonData: [[(title: String, imageName: String, width: CGFloat?, height: CGFloat?)]] = [
-    [("스토어 케어", "CSicon1", width: 20, height: 24),
-     ("고객의 소리", "CSicon2", width: 24, height: 24)],
-    [("매장 정보", "CSicon3", width: 32, height: 24),
-     ("반납기 정보", "CSicon4", width: 22, height: 21)]
-]
-
-
-struct PayView: View {
-    var body: some View {
-        Text("Pay")
-            .font(Font.Pretend.pretendardSemiBold(size: 18))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(0..<payButtonData.count, id: \.self) { rowIndex in
-                HStack {
-                    PayAndCSButton(
-                        title: payButtonData[rowIndex][0].title,
-                        imageName: payButtonData[rowIndex][0].imageName,
-                        width: payButtonData[rowIndex][0].width,
-                        height: payButtonData[rowIndex][0].height
-                    )
-                    .padding(.vertical, 16)
-                    
-                    Spacer()
-                    
-                    PayAndCSButton(
-                        title: payButtonData[rowIndex][1].title,
-                        imageName: payButtonData[rowIndex][1].imageName,
-                        width: payButtonData[rowIndex][1].width,
-                        height: payButtonData[rowIndex][1].height
-                    )
-  //                  .padding(.vertical, 16)
-                    
-                }
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        Divider()
-        
-    }
-}
-
-struct CSView: View {
-    var body: some View {
-        // CS 부분
-        Text("고객지원")
-            .font(Font.Pretend.pretendardSemiBold(size: 18))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
-        
-        VStack(alignment: .leading, spacing: 0) {
-            ForEach(0..<CSButtonData.count, id: \.self) { rowIndex in
-                HStack {
-                    PayAndCSButton(
-                        title: CSButtonData[rowIndex][0].title,
-                        imageName: CSButtonData[rowIndex][0].imageName,
-                        width: CSButtonData[rowIndex][0].width,
-                        height: CSButtonData[rowIndex][0].height
-                    )
-                    .padding(.vertical  , 16)
-                    
-                    Spacer()
-                    
-                    PayAndCSButton(
-                        title: CSButtonData[rowIndex][1].title,
-                        imageName: CSButtonData[rowIndex][1].imageName,
-                        width: CSButtonData[rowIndex][1].width,
-                        height: CSButtonData[rowIndex][1].height
-                    )
-                    .padding(.vertical, 16)
-                    
-                }
-            }
-            
-            PayAndCSButton(title: "마이 스타벅스 리뷰", imageName: "CSicon5", width:24, height: 24)
-                .frame(height: 32)
-                .padding(.vertical, 16)
-        }
-    }
-}
-
-//총합 view
-struct OtherView:View {
-    @AppStorage("nickname") var nickname: String = ""
-    
-    var body: some View {
-        NavigationStack{
-            VStack{
+        NavigationStack {
+            VStack {
                 UpperView()
-                ZStack{
-                    Color(hex: "#F8F8F8")
-                        .ignoresSafeArea()
-                    VStack{
+                ZStack {
+                    Color(hex: "#F8F8F8").ignoresSafeArea()
+                    VStack {
                         Spacer()
                         WelcomeNameView()
-                        UpperButtonView()
+                        TopActionButtons()
                         Spacer()
-                        PayView()
+                        ButtonGroupView(title: "Pay", items: payButtonData)
                         Spacer()
-                        CSView()
+                        ButtonGroupView(title: "고객지원", items: csButtonData)
                         Spacer()
                     }
                 }
             }
-            
         }
     }
 }
 
-#Preview {
-    OtherView()
+// MARK: - 예시 버튼 데이터
 
+
+let payButtonData: [[ButtonItem]] = [
+    [
+        ButtonItem(title: "스타벅스 카드 등록", imageName: "Payicon1", width: 24, height: 16, destination: nil),
+        ButtonItem(title: "카드 교환권 등록", imageName: "Payicon2", width: 26, height: 23, destination: nil)
+    ],
+    [
+        ButtonItem(title: "쿠폰 등록", imageName: "Payicon3", width: 24, height: 18, destination: nil),
+        ButtonItem(title: "쿠폰 히스토리", imageName: "Payicon4", width: 26, height: 23, destination: nil)
+    ]
+]
+
+let csButtonData: [[ButtonItem]] = [
+    [
+        ButtonItem(title: "스토어 케어", imageName: "CSicon1", width: 20, height: 24, destination: nil),
+        ButtonItem(title: "고객의 소리", imageName: "CSicon2", width: 24, height: 24, destination: nil)
+    ],
+    [
+        ButtonItem(title: "매장 정보", imageName: "CSicon3", width: 32, height: 24, destination: AnyView(StoreFinderView())),
+        ButtonItem(title: "반납기 정보", imageName: "CSicon4", width: 22, height: 21, destination: nil)
+    ]
+]
+
+#Preview{
+    OtherView()
 }

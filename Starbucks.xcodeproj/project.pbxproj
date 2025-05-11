@@ -1,0 +1,889 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E8A2740A8BCC6C23B5184D8 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9527D2FA47946AA7B67C1D02 /* Pretendard-Regular.otf */; };
+		0FC35DA292D86EDF1AEAD0E5 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45428C0F584DB9EAE658DCA6 /* OtherView.swift */; };
+		135CA8BD01BC02BFBB2C9271 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF8E4D3E6952599CC54400 /* OrderViewModel.swift */; };
+		140C631EA7B30C6C3B0EF799 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4DED17DBA223E5963218F247 /* Pretendard-Black.otf */; };
+		17FD43885871A97CA49B0975 /* OtherFindStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A92F0D095CDC422351D048 /* OtherFindStoreView.swift */; };
+		19B8C10E5ADCC091F08B57AF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F085E2F65EDE8F023B4ADC80 /* SplashView.swift */; };
+		1A1962FC708E0A1C1FF29359 /* OrderMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116C86B7633827FB86D03FA1 /* OrderMenuModel.swift */; };
+		1C542376970339CCD62C081A /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58E27C0F71CEC94BD1E9F2DA /* Pretendard-Light.otf */; };
+		1F4AF3CA88B11F7F2901DCA8 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066735A0DECA4FE8163F50B5 /* CameraPicker.swift */; };
+		206CFDB227367B26C9D19D26 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663DF2B620923FA26CE3EF58 /* MapView.swift */; };
+		21D02F7A48F635F64D25111E /* OtherReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDCB07257FA2F8CF5434362 /* OtherReceiptViewModel.swift */; };
+		2230EAF5DA0B57C85AF1E112 /* ShopBestItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92CA8EA4ECD2B9DFE45CD17 /* ShopBestItemsView.swift */; };
+		2DE16A8BA18F55A8384DCB30 /* SquareProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624D5CC54EAEE658B1F5E5D4 /* SquareProductCard.swift */; };
+		3157A686AC2ED652980BEACA /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D08C7F222CB369DCF320260 /* ProductCard.swift */; };
+		316712E0F5C0DD883A045913 /* ColorHexExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439B85D79AD4D03FAE8BE29 /* ColorHexExtend.swift */; };
+		3538065E38355B69A850ED67 /* TuistBundle+Starbucks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB8C9B080F58BA7914EFACA /* TuistBundle+Starbucks.swift */; };
+		356335B9535799FE491C5713 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53305F3AA15D64BD75985E6F /* Preview Assets.xcassets */; };
+		357F950B40D58A606E19537C /* StoreRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851DBD26E0A3C18EAAB8F9C /* StoreRowView.swift */; };
+		35B6AAA2CBDE2C1FFE8807DE /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 055534E4BB5D967333C685A0 /* Pretendard-ExtraLight.otf */; };
+		3BD2DF7961D2A3FA23384AE3 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C69CB22BA3D82B3B6C2C208 /* SignupModel.swift */; };
+		438DF0578E49E50842C552B5 /* ReceiptCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A48165A2B278174276F85AD /* ReceiptCard.swift */; };
+		46E390F37B5C0D5C7720696C /* OrderDrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AFD58C9E3EEBA74A431951 /* OrderDrinkModel.swift */; };
+		4ABB24F26F2FADB8A9F91FFC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4988A93456A64DCB24B35 /* LoginModel.swift */; };
+		4E3F3DB3C7FC08B1DD1BAB8F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7E6B8B9BC5E669B98288B /* Fonts.swift */; };
+		4E4878089B63041194B6B975 /* TuistFonts+Starbucks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8D26E0AA4084BA30BE80C /* TuistFonts+Starbucks.swift */; };
+		55FE327F8D346E6DE26B902D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49283800A19BCD73AB01E85A /* AppState.swift */; };
+		5C8CD62858905A6991DB6DD1 /* StarbucksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613796A95A93232D997903C /* StarbucksApp.swift */; };
+		6D8E9003788DB4FF72BE54B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2B4C2F45C34367633359CA /* Assets.xcassets */; };
+		6EF6FE0CC736518FB26CBB98 /* OtherReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A94188C5809B78E63CA133 /* OtherReceiptModel.swift */; };
+		6F9859C1824FDCBEA0E5DE65 /* StarbucksTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BBD80926DCE5E8F5DB5CB9 /* StarbucksTabView.swift */; };
+		76D5FF2B9CC3995368A0A37A /* TuistAssets+Starbucks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BF681C742CF2A6E2D61A5 /* TuistAssets+Starbucks.swift */; };
+		7AC3E27CB7B371EAF0ADD623 /* ShopWhatsNewBannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977023D1176A08C2DB84BAA /* ShopWhatsNewBannersView.swift */; };
+		85A1396A8D5E2E2FE413AF31 /* LocationManager 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1173BE0E0551E37C60E15B8A /* LocationManager 2.swift */; };
+		872F66F9EB266D2E5C6E721D /* loadStarbucksGeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3CA447B5BA2C2390306A2 /* loadStarbucksGeoJSON.swift */; };
+		8AA693B7B64C3058BBC8AE8D /* StoreSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E364F8BC2A4CF39AD6591 /* StoreSheetView.swift */; };
+		8C185170266BF7CA285AF306 /* ShopNewProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14709F834A0F8F17565BB2D /* ShopNewProductsView.swift */; };
+		A044C7A96094051C90799A8A /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F6BB2C99BAC31F1D57177C26 /* Pretendard-Thin.otf */; };
+		A0E2E22133F704BF70FDA436 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529603BD8B59A2884153E083 /* LoginViewModel.swift */; };
+		A534E40E4218AF37D87E0406 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC61E88FD56531C81A1599 /* SignupView.swift */; };
+		A60C68AD901AE8023C5E78D8 /* 스타벅스_2025 데이터.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2D2DDD69446BD51BEC0F189C /* 스타벅스_2025 데이터.geojson */; };
+		A93381A8BA52F546375B9405 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A090BCFC64A94E08BCD04768 /* Pretendard-ExtraBold.otf */; };
+		ABA1FAD9F359E8BD088C3A49 /* OrderTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CDE4CC2B9FACC5D426429 /* OrderTotalView.swift */; };
+		B06AD6C177E8C65EC48639A1 /* OtherReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB0679CC145BB427593C4D /* OtherReceiptView.swift */; };
+		B090755D4D69F19AD3C4BD0E /* OtherReceiptsNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED39E09F22F90117B7DF9CF /* OtherReceiptsNav.swift */; };
+		B25B1E3114DD074C0BBC0182 /* ShopAllProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E268D13AB9DAE57C1BA684EB /* ShopAllProductsView.swift */; };
+		B92F5AFE8B0AA6AAD93226F0 /* OtherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F9BC2F99403967FA02C4F3 /* OtherViewModel.swift */; };
+		BE28EB7E1F08819F23135040 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345B0F89D94EC3953E882FD5 /* StoreModel.swift */; };
+		BF3D1453062A1BEFE7E6CF13 /* OrderTotalTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA8B562D7D40EA2DEA54C4 /* OrderTotalTabView.swift */; };
+		CDA188A11659E0A2D0EEF9DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC5F3B9DDAEC35516077537 /* LoginView.swift */; };
+		CE54A3036B7407BE73DF23C8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC68D904ADC5915127CB149 /* HomeModel.swift */; };
+		D13E7339582CD85D548EB4EC /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A47E88844B6ACA1D610000 /* SignupViewModel.swift */; };
+		D1A2573FA700053EEAA24A53 /* StarbucksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ECEB5D0F34EF9C840BDCFE /* StarbucksTests.swift */; };
+		D3A23C92BE35D685261E9247 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E062A9B6A6B83479FD97A446 /* ContentView.swift */; };
+		DD137CC8873BAA5CD5422908 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B42162806FA8822D3CE8F7 /* HomeViewModel.swift */; };
+		DD7F238CCBB668420871520C /* OrderMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACD89B57A79BC8154854349 /* OrderMenuView.swift */; };
+		ECCDD0D44227C0AEDF0F4056 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E15DBEE3C2F5CBA84BC6D /* Pretendard-Bold.otf */; };
+		ED249073E07CD1D0204AAC97 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA344F7DD2F18DA68782A747 /* Pretendard-Medium.otf */; };
+		EE9CBE7E1C96DBD8526BCD98 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB46BB91F2F2BAE98C07ECD7 /* Pretendard-SemiBold.otf */; };
+		F2154BE7B030D964014C31DC /* StoreSelectBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578323B0FA3B58857D5273B4 /* StoreSelectBar.swift */; };
+		F40F31169DC02A1BEE9BB0A1 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E8EA685175F14D7CD1D645 /* ShopView.swift */; };
+		F4B655B1EC19803B42E5BFAA /* OrderTotalDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA621843A4D64A04CA9207B /* OrderTotalDrinkView.swift */; };
+		F6BFCBFFBA6ECF5A95E07A0E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A537EB5FFF993E694D589 /* DateFormatter.swift */; };
+		F9F13698E93B11A531DF66BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893B9EC75D7AF416857926D8 /* HomeView.swift */; };
+		FA9C960D69E4C859D0A84222 /* ChristmasAdvertise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D72CDDCA88BB1BCAFD4D41 /* ChristmasAdvertise.swift */; };
+		FAB496344C4EA2A90BF7C23C /* OrderTopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6C3BB62BB14C23D346B315 /* OrderTopTabView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BB507CA861D8811FF5D8DEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6D4E0F3ACA33D480EC57FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D401A5A43FE1CE8FBA6FEA06;
+			remoteInfo = Starbucks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B395DFC4EE20CD3CB16DE27F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59B7C1FEA9C48A0D9FA1FEB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		055534E4BB5D967333C685A0 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		066735A0DECA4FE8163F50B5 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		0A462637C2347241712627CD /* StarbucksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "StarbucksTests-Info.plist"; sourceTree = "<group>"; };
+		0A48165A2B278174276F85AD /* ReceiptCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCard.swift; sourceTree = "<group>"; };
+		116C86B7633827FB86D03FA1 /* OrderMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMenuModel.swift; sourceTree = "<group>"; };
+		1173BE0E0551E37C60E15B8A /* LocationManager 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationManager 2.swift"; sourceTree = "<group>"; };
+		13A8D26E0AA4084BA30BE80C /* TuistFonts+Starbucks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+Starbucks.swift"; sourceTree = "<group>"; };
+		16ECEB5D0F34EF9C840BDCFE /* StarbucksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksTests.swift; sourceTree = "<group>"; };
+		19A47E88844B6ACA1D610000 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		1D08C7F222CB369DCF320260 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		1D8E15DBEE3C2F5CBA84BC6D /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		1FCA8B562D7D40EA2DEA54C4 /* OrderTotalTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTotalTabView.swift; sourceTree = "<group>"; };
+		24D72CDDCA88BB1BCAFD4D41 /* ChristmasAdvertise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasAdvertise.swift; sourceTree = "<group>"; };
+		2D2DDD69446BD51BEC0F189C /* 스타벅스_2025 데이터.geojson */ = {isa = PBXFileReference; path = "스타벅스_2025 데이터.geojson"; sourceTree = "<group>"; };
+		2ED39E09F22F90117B7DF9CF /* OtherReceiptsNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherReceiptsNav.swift; sourceTree = "<group>"; };
+		2EDCB07257FA2F8CF5434362 /* OtherReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherReceiptViewModel.swift; sourceTree = "<group>"; };
+		300BF681C742CF2A6E2D61A5 /* TuistAssets+Starbucks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Starbucks.swift"; sourceTree = "<group>"; };
+		345B0F89D94EC3953E882FD5 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		35A92F0D095CDC422351D048 /* OtherFindStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFindStoreView.swift; sourceTree = "<group>"; };
+		35E8EA685175F14D7CD1D645 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		44CB0679CC145BB427593C4D /* OtherReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherReceiptView.swift; sourceTree = "<group>"; };
+		45428C0F584DB9EAE658DCA6 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
+		45BF8E4D3E6952599CC54400 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		477E364F8BC2A4CF39AD6591 /* StoreSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSheetView.swift; sourceTree = "<group>"; };
+		49283800A19BCD73AB01E85A /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4977023D1176A08C2DB84BAA /* ShopWhatsNewBannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopWhatsNewBannersView.swift; sourceTree = "<group>"; };
+		49A7E6B8B9BC5E669B98288B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		4DED17DBA223E5963218F247 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		529603BD8B59A2884153E083 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		53305F3AA15D64BD75985E6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5439B85D79AD4D03FAE8BE29 /* ColorHexExtend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexExtend.swift; sourceTree = "<group>"; };
+		578323B0FA3B58857D5273B4 /* StoreSelectBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSelectBar.swift; sourceTree = "<group>"; };
+		58E27C0F71CEC94BD1E9F2DA /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		624D5CC54EAEE658B1F5E5D4 /* SquareProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareProductCard.swift; sourceTree = "<group>"; };
+		663DF2B620923FA26CE3EF58 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		6851DBD26E0A3C18EAAB8F9C /* StoreRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRowView.swift; sourceTree = "<group>"; };
+		74B42162806FA8822D3CE8F7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		77FC61E88FD56531C81A1599 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		7AF4988A93456A64DCB24B35 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		7BA621843A4D64A04CA9207B /* OrderTotalDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTotalDrinkView.swift; sourceTree = "<group>"; };
+		7C69CB22BA3D82B3B6C2C208 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		85F9BC2F99403967FA02C4F3 /* OtherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewModel.swift; sourceTree = "<group>"; };
+		893B9EC75D7AF416857926D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		89A94188C5809B78E63CA133 /* OtherReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherReceiptModel.swift; sourceTree = "<group>"; };
+		9527D2FA47946AA7B67C1D02 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		9C6C3BB62BB14C23D346B315 /* OrderTopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTopTabView.swift; sourceTree = "<group>"; };
+		9CC68D904ADC5915127CB149 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		A090BCFC64A94E08BCD04768 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		A2AFD58C9E3EEBA74A431951 /* OrderDrinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDrinkModel.swift; sourceTree = "<group>"; };
+		A613796A95A93232D997903C /* StarbucksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksApp.swift; sourceTree = "<group>"; };
+		A9E3CA447B5BA2C2390306A2 /* loadStarbucksGeoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadStarbucksGeoJSON.swift; sourceTree = "<group>"; };
+		AEC5F3B9DDAEC35516077537 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BB46BB91F2F2BAE98C07ECD7 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		C0AF9A8E77F4EB5960EDF4E1 /* StarbucksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarbucksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24CDE4CC2B9FACC5D426429 /* OrderTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTotalView.swift; sourceTree = "<group>"; };
+		D14709F834A0F8F17565BB2D /* ShopNewProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNewProductsView.swift; sourceTree = "<group>"; };
+		D8BBD80926DCE5E8F5DB5CB9 /* StarbucksTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarbucksTabView.swift; sourceTree = "<group>"; };
+		DE3A537EB5FFF993E694D589 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		DEB8C9B080F58BA7914EFACA /* TuistBundle+Starbucks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Starbucks.swift"; sourceTree = "<group>"; };
+		E062A9B6A6B83479FD97A446 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E268D13AB9DAE57C1BA684EB /* ShopAllProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopAllProductsView.swift; sourceTree = "<group>"; };
+		EACD89B57A79BC8154854349 /* OrderMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMenuView.swift; sourceTree = "<group>"; };
+		EB1215644AD9AC027B69D132 /* Starbucks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starbucks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F085E2F65EDE8F023B4ADC80 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		F6BB2C99BAC31F1D57177C26 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		F72B579CAADF440E49BCE9B0 /* Starbucks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Starbucks-Info.plist"; sourceTree = "<group>"; };
+		F92CA8EA4ECD2B9DFE45CD17 /* ShopBestItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopBestItemsView.swift; sourceTree = "<group>"; };
+		FA344F7DD2F18DA68782A747 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		FC2B4C2F45C34367633359CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		419C9E768EC5AE23AC80BC1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		733DD211EAAC9AC7CAEA0037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062D58FDDD2C063056CBC752 /* OrderView */ = {
+			isa = PBXGroup;
+			children = (
+				7027FD328DF54872CF6E14C3 /* OrderTopTab */,
+				780B9162EFE5B4FEB14E6621 /* OrderTotal */,
+				4EC46AEAD9A208F3C806916E /* StoreSheet */,
+				C24CDE4CC2B9FACC5D426429 /* OrderTotalView.swift */,
+			);
+			path = OrderView;
+			sourceTree = "<group>";
+		};
+		2092415062116E0D642D1E0B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				16ECEB5D0F34EF9C840BDCFE /* StarbucksTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		30268A7B4514E5866BBB42D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAB67195E79B24A055F05F98 /* Preview Content */,
+				2D2DDD69446BD51BEC0F189C /* 스타벅스_2025 데이터.geojson */,
+				FC2B4C2F45C34367633359CA /* Assets.xcassets */,
+				4DED17DBA223E5963218F247 /* Pretendard-Black.otf */,
+				1D8E15DBEE3C2F5CBA84BC6D /* Pretendard-Bold.otf */,
+				A090BCFC64A94E08BCD04768 /* Pretendard-ExtraBold.otf */,
+				055534E4BB5D967333C685A0 /* Pretendard-ExtraLight.otf */,
+				58E27C0F71CEC94BD1E9F2DA /* Pretendard-Light.otf */,
+				FA344F7DD2F18DA68782A747 /* Pretendard-Medium.otf */,
+				9527D2FA47946AA7B67C1D02 /* Pretendard-Regular.otf */,
+				BB46BB91F2F2BAE98C07ECD7 /* Pretendard-SemiBold.otf */,
+				F6BB2C99BAC31F1D57177C26 /* Pretendard-Thin.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4EC46AEAD9A208F3C806916E /* StoreSheet */ = {
+			isa = PBXGroup;
+			children = (
+				663DF2B620923FA26CE3EF58 /* MapView.swift */,
+				6851DBD26E0A3C18EAAB8F9C /* StoreRowView.swift */,
+				477E364F8BC2A4CF39AD6591 /* StoreSheetView.swift */,
+			);
+			path = StoreSheet;
+			sourceTree = "<group>";
+		};
+		4F915776ACFB7833710EA338 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB1215644AD9AC027B69D132 /* Starbucks.app */,
+				C0AF9A8E77F4EB5960EDF4E1 /* StarbucksTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7027FD328DF54872CF6E14C3 /* OrderTopTab */ = {
+			isa = PBXGroup;
+			children = (
+				9C6C3BB62BB14C23D346B315 /* OrderTopTabView.swift */,
+			);
+			path = OrderTopTab;
+			sourceTree = "<group>";
+		};
+		7114DBD29435DE5AD4F6FE7D = {
+			isa = PBXGroup;
+			children = (
+				9E238C38CE2CA5E36B56681F /* Project */,
+				4F915776ACFB7833710EA338 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		780B9162EFE5B4FEB14E6621 /* OrderTotal */ = {
+			isa = PBXGroup;
+			children = (
+				7BA621843A4D64A04CA9207B /* OrderTotalDrinkView.swift */,
+				1FCA8B562D7D40EA2DEA54C4 /* OrderTotalTabView.swift */,
+				578323B0FA3B58857D5273B4 /* StoreSelectBar.swift */,
+			);
+			path = OrderTotal;
+			sourceTree = "<group>";
+		};
+		786273BB3512A6B9E0BB9FFF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				300BF681C742CF2A6E2D61A5 /* TuistAssets+Starbucks.swift */,
+				DEB8C9B080F58BA7914EFACA /* TuistBundle+Starbucks.swift */,
+				13A8D26E0AA4084BA30BE80C /* TuistFonts+Starbucks.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		87C1C5EBD1F89D48268809A6 /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				1D08C7F222CB369DCF320260 /* ProductCard.swift */,
+				E268D13AB9DAE57C1BA684EB /* ShopAllProductsView.swift */,
+				F92CA8EA4ECD2B9DFE45CD17 /* ShopBestItemsView.swift */,
+				D14709F834A0F8F17565BB2D /* ShopNewProductsView.swift */,
+				35E8EA685175F14D7CD1D645 /* ShopView.swift */,
+				4977023D1176A08C2DB84BAA /* ShopWhatsNewBannersView.swift */,
+				624D5CC54EAEE658B1F5E5D4 /* SquareProductCard.swift */,
+			);
+			path = ShopView;
+			sourceTree = "<group>";
+		};
+		8E9625CEBFEB24056A5C2285 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				A9E3CA447B5BA2C2390306A2 /* loadStarbucksGeoJSON.swift */,
+				1173BE0E0551E37C60E15B8A /* LocationManager 2.swift */,
+				45BF8E4D3E6952599CC54400 /* OrderViewModel.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		9E238C38CE2CA5E36B56681F /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				A43C563675542B6402B67BD6 /* Derived */,
+				A02519338BFBC09EE92A3256 /* Starbucks */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		A02519338BFBC09EE92A3256 /* Starbucks */ = {
+			isa = PBXGroup;
+			children = (
+				30268A7B4514E5866BBB42D1 /* Resources */,
+				F3721401388BBE4C179006C6 /* Sources */,
+				2092415062116E0D642D1E0B /* Tests */,
+			);
+			path = Starbucks;
+			sourceTree = "<group>";
+		};
+		A43C563675542B6402B67BD6 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				F78C8AE6C787DB14591C3E1C /* InfoPlists */,
+				786273BB3512A6B9E0BB9FFF /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		AAB67195E79B24A055F05F98 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				53305F3AA15D64BD75985E6F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADCF917FAE53B4B6F5998580 /* OtherReceiptView */ = {
+			isa = PBXGroup;
+			children = (
+				2ED39E09F22F90117B7DF9CF /* OtherReceiptsNav.swift */,
+				44CB0679CC145BB427593C4D /* OtherReceiptView.swift */,
+				0A48165A2B278174276F85AD /* ReceiptCard.swift */,
+			);
+			path = OtherReceiptView;
+			sourceTree = "<group>";
+		};
+		B02496717FE74C958D9ED3B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				062D58FDDD2C063056CBC752 /* OrderView */,
+				D675D7727D0EED6ECA0A1090 /* OtherView */,
+				87C1C5EBD1F89D48268809A6 /* ShopView */,
+				24D72CDDCA88BB1BCAFD4D41 /* ChristmasAdvertise.swift */,
+				5439B85D79AD4D03FAE8BE29 /* ColorHexExtend.swift */,
+				893B9EC75D7AF416857926D8 /* HomeView.swift */,
+				AEC5F3B9DDAEC35516077537 /* LoginView.swift */,
+				77FC61E88FD56531C81A1599 /* SignupView.swift */,
+				F085E2F65EDE8F023B4ADC80 /* SplashView.swift */,
+				D8BBD80926DCE5E8F5DB5CB9 /* StarbucksTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D675D7727D0EED6ECA0A1090 /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				ADCF917FAE53B4B6F5998580 /* OtherReceiptView */,
+				EACD89B57A79BC8154854349 /* OrderMenuView.swift */,
+				35A92F0D095CDC422351D048 /* OtherFindStoreView.swift */,
+				45428C0F584DB9EAE658DCA6 /* OtherView.swift */,
+			);
+			path = OtherView;
+			sourceTree = "<group>";
+		};
+		DB264D0D08D10575B0D3B9EC /* OrderModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2AFD58C9E3EEBA74A431951 /* OrderDrinkModel.swift */,
+				345B0F89D94EC3953E882FD5 /* StoreModel.swift */,
+			);
+			path = OrderModel;
+			sourceTree = "<group>";
+		};
+		E1CE748561C55C7E37ED6564 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB264D0D08D10575B0D3B9EC /* OrderModel */,
+				9CC68D904ADC5915127CB149 /* HomeModel.swift */,
+				7AF4988A93456A64DCB24B35 /* LoginModel.swift */,
+				116C86B7633827FB86D03FA1 /* OrderMenuModel.swift */,
+				89A94188C5809B78E63CA133 /* OtherReceiptModel.swift */,
+				7C69CB22BA3D82B3B6C2C208 /* SignupModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0DB1E05BA4AD5C6C3A6F5FB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8E9625CEBFEB24056A5C2285 /* Order */,
+				066735A0DECA4FE8163F50B5 /* CameraPicker.swift */,
+				74B42162806FA8822D3CE8F7 /* HomeViewModel.swift */,
+				529603BD8B59A2884153E083 /* LoginViewModel.swift */,
+				2EDCB07257FA2F8CF5434362 /* OtherReceiptViewModel.swift */,
+				85F9BC2F99403967FA02C4F3 /* OtherViewModel.swift */,
+				19A47E88844B6ACA1D610000 /* SignupViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F3721401388BBE4C179006C6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E1CE748561C55C7E37ED6564 /* Models */,
+				F0DB1E05BA4AD5C6C3A6F5FB /* ViewModels */,
+				B02496717FE74C958D9ED3B8 /* Views */,
+				49283800A19BCD73AB01E85A /* AppState.swift */,
+				E062A9B6A6B83479FD97A446 /* ContentView.swift */,
+				DE3A537EB5FFF993E694D589 /* DateFormatter.swift */,
+				49A7E6B8B9BC5E669B98288B /* Fonts.swift */,
+				A613796A95A93232D997903C /* StarbucksApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F78C8AE6C787DB14591C3E1C /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				F72B579CAADF440E49BCE9B0 /* Starbucks-Info.plist */,
+				0A462637C2347241712627CD /* StarbucksTests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22C72AAC1193AAF83D53E80C /* StarbucksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B8505896D2F9A4DDB06C810 /* Build configuration list for PBXNativeTarget "StarbucksTests" */;
+			buildPhases = (
+				97745909C621374C1221E6E6 /* Sources */,
+				E8B4D02132B025C18DF2F0CC /* Resources */,
+				733DD211EAAC9AC7CAEA0037 /* Frameworks */,
+				E59B7C1FEA9C48A0D9FA1FEB /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B47D57A02C7453411F719E0 /* PBXTargetDependency */,
+			);
+			name = StarbucksTests;
+			packageProductDependencies = (
+			);
+			productName = StarbucksTests;
+			productReference = C0AF9A8E77F4EB5960EDF4E1 /* StarbucksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D401A5A43FE1CE8FBA6FEA06 /* Starbucks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B22A5BB702E4EE26BE7C9F7 /* Build configuration list for PBXNativeTarget "Starbucks" */;
+			buildPhases = (
+				20A477251EB5ED58A88561A5 /* Sources */,
+				D35BEF2C328773AC6E73D29D /* Resources */,
+				419C9E768EC5AE23AC80BC1A /* Frameworks */,
+				B395DFC4EE20CD3CB16DE27F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starbucks;
+			packageProductDependencies = (
+			);
+			productName = Starbucks;
+			productReference = EB1215644AD9AC027B69D132 /* Starbucks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA6D4E0F3ACA33D480EC57FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+					22C72AAC1193AAF83D53E80C = {
+						TestTargetID = D401A5A43FE1CE8FBA6FEA06;
+					};
+				};
+			};
+			buildConfigurationList = E7AC5415190D9111D2D746B6 /* Build configuration list for PBXProject "Starbucks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7114DBD29435DE5AD4F6FE7D;
+			productRefGroup = 4F915776ACFB7833710EA338 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D401A5A43FE1CE8FBA6FEA06 /* Starbucks */,
+				22C72AAC1193AAF83D53E80C /* StarbucksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D35BEF2C328773AC6E73D29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8E9003788DB4FF72BE54B2 /* Assets.xcassets in Resources */,
+				140C631EA7B30C6C3B0EF799 /* Pretendard-Black.otf in Resources */,
+				ECCDD0D44227C0AEDF0F4056 /* Pretendard-Bold.otf in Resources */,
+				A93381A8BA52F546375B9405 /* Pretendard-ExtraBold.otf in Resources */,
+				35B6AAA2CBDE2C1FFE8807DE /* Pretendard-ExtraLight.otf in Resources */,
+				1C542376970339CCD62C081A /* Pretendard-Light.otf in Resources */,
+				ED249073E07CD1D0204AAC97 /* Pretendard-Medium.otf in Resources */,
+				0E8A2740A8BCC6C23B5184D8 /* Pretendard-Regular.otf in Resources */,
+				EE9CBE7E1C96DBD8526BCD98 /* Pretendard-SemiBold.otf in Resources */,
+				A044C7A96094051C90799A8A /* Pretendard-Thin.otf in Resources */,
+				356335B9535799FE491C5713 /* Preview Assets.xcassets in Resources */,
+				A60C68AD901AE8023C5E78D8 /* 스타벅스_2025 데이터.geojson in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8B4D02132B025C18DF2F0CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20A477251EB5ED58A88561A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76D5FF2B9CC3995368A0A37A /* TuistAssets+Starbucks.swift in Sources */,
+				3538065E38355B69A850ED67 /* TuistBundle+Starbucks.swift in Sources */,
+				4E4878089B63041194B6B975 /* TuistFonts+Starbucks.swift in Sources */,
+				55FE327F8D346E6DE26B902D /* AppState.swift in Sources */,
+				D3A23C92BE35D685261E9247 /* ContentView.swift in Sources */,
+				F6BFCBFFBA6ECF5A95E07A0E /* DateFormatter.swift in Sources */,
+				4E3F3DB3C7FC08B1DD1BAB8F /* Fonts.swift in Sources */,
+				CE54A3036B7407BE73DF23C8 /* HomeModel.swift in Sources */,
+				4ABB24F26F2FADB8A9F91FFC /* LoginModel.swift in Sources */,
+				1A1962FC708E0A1C1FF29359 /* OrderMenuModel.swift in Sources */,
+				46E390F37B5C0D5C7720696C /* OrderDrinkModel.swift in Sources */,
+				BE28EB7E1F08819F23135040 /* StoreModel.swift in Sources */,
+				6EF6FE0CC736518FB26CBB98 /* OtherReceiptModel.swift in Sources */,
+				3BD2DF7961D2A3FA23384AE3 /* SignupModel.swift in Sources */,
+				5C8CD62858905A6991DB6DD1 /* StarbucksApp.swift in Sources */,
+				1F4AF3CA88B11F7F2901DCA8 /* CameraPicker.swift in Sources */,
+				DD137CC8873BAA5CD5422908 /* HomeViewModel.swift in Sources */,
+				A0E2E22133F704BF70FDA436 /* LoginViewModel.swift in Sources */,
+				85A1396A8D5E2E2FE413AF31 /* LocationManager 2.swift in Sources */,
+				135CA8BD01BC02BFBB2C9271 /* OrderViewModel.swift in Sources */,
+				872F66F9EB266D2E5C6E721D /* loadStarbucksGeoJSON.swift in Sources */,
+				21D02F7A48F635F64D25111E /* OtherReceiptViewModel.swift in Sources */,
+				B92F5AFE8B0AA6AAD93226F0 /* OtherViewModel.swift in Sources */,
+				D13E7339582CD85D548EB4EC /* SignupViewModel.swift in Sources */,
+				FA9C960D69E4C859D0A84222 /* ChristmasAdvertise.swift in Sources */,
+				316712E0F5C0DD883A045913 /* ColorHexExtend.swift in Sources */,
+				F9F13698E93B11A531DF66BD /* HomeView.swift in Sources */,
+				CDA188A11659E0A2D0EEF9DC /* LoginView.swift in Sources */,
+				FAB496344C4EA2A90BF7C23C /* OrderTopTabView.swift in Sources */,
+				F4B655B1EC19803B42E5BFAA /* OrderTotalDrinkView.swift in Sources */,
+				BF3D1453062A1BEFE7E6CF13 /* OrderTotalTabView.swift in Sources */,
+				F2154BE7B030D964014C31DC /* StoreSelectBar.swift in Sources */,
+				ABA1FAD9F359E8BD088C3A49 /* OrderTotalView.swift in Sources */,
+				206CFDB227367B26C9D19D26 /* MapView.swift in Sources */,
+				357F950B40D58A606E19537C /* StoreRowView.swift in Sources */,
+				8AA693B7B64C3058BBC8AE8D /* StoreSheetView.swift in Sources */,
+				DD7F238CCBB668420871520C /* OrderMenuView.swift in Sources */,
+				17FD43885871A97CA49B0975 /* OtherFindStoreView.swift in Sources */,
+				B06AD6C177E8C65EC48639A1 /* OtherReceiptView.swift in Sources */,
+				B090755D4D69F19AD3C4BD0E /* OtherReceiptsNav.swift in Sources */,
+				438DF0578E49E50842C552B5 /* ReceiptCard.swift in Sources */,
+				0FC35DA292D86EDF1AEAD0E5 /* OtherView.swift in Sources */,
+				3157A686AC2ED652980BEACA /* ProductCard.swift in Sources */,
+				B25B1E3114DD074C0BBC0182 /* ShopAllProductsView.swift in Sources */,
+				2230EAF5DA0B57C85AF1E112 /* ShopBestItemsView.swift in Sources */,
+				8C185170266BF7CA285AF306 /* ShopNewProductsView.swift in Sources */,
+				F40F31169DC02A1BEE9BB0A1 /* ShopView.swift in Sources */,
+				7AC3E27CB7B371EAF0ADD623 /* ShopWhatsNewBannersView.swift in Sources */,
+				2DE16A8BA18F55A8384DCB30 /* SquareProductCard.swift in Sources */,
+				A534E40E4218AF37D87E0406 /* SignupView.swift in Sources */,
+				19B8C10E5ADCC091F08B57AF /* SplashView.swift in Sources */,
+				6F9859C1824FDCBEA0E5DE65 /* StarbucksTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97745909C621374C1221E6E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A2573FA700053EEAA24A53 /* StarbucksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B47D57A02C7453411F719E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starbucks;
+			target = D401A5A43FE1CE8FBA6FEA06 /* Starbucks */;
+			targetProxy = 3BB507CA861D8811FF5D8DEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10E04C57CF4BEE714FC7508B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/StarbucksTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.StarbucksTests;
+				PRODUCT_NAME = StarbucksTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Starbucks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Starbucks";
+				TEST_TARGET_NAME = Starbucks;
+			};
+			name = Debug;
+		};
+		555CC03C3DAA5F910D290569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/Starbucks-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Starbucks;
+				PRODUCT_NAME = Starbucks;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A09CEF0ADFFB57C8226BA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F55A92C45477C4C107FA803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/StarbucksTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.StarbucksTests;
+				PRODUCT_NAME = StarbucksTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Starbucks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Starbucks";
+				TEST_TARGET_NAME = Starbucks;
+			};
+			name = Release;
+		};
+		AA9926B2212A83643CF3BC01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/Starbucks-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Starbucks;
+				PRODUCT_NAME = Starbucks;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD243BD40FA5FEDC5BFE8183 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B22A5BB702E4EE26BE7C9F7 /* Build configuration list for PBXNativeTarget "Starbucks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9926B2212A83643CF3BC01 /* Debug */,
+				555CC03C3DAA5F910D290569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B8505896D2F9A4DDB06C810 /* Build configuration list for PBXNativeTarget "StarbucksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E04C57CF4BEE714FC7508B /* Debug */,
+				8F55A92C45477C4C107FA803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7AC5415190D9111D2D746B6 /* Build configuration list for PBXProject "Starbucks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A09CEF0ADFFB57C8226BA36 /* Debug */,
+				BD243BD40FA5FEDC5BFE8183 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA6D4E0F3ACA33D480EC57FF /* Project object */;
+}
