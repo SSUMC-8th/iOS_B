@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainLoginView: View {
+    @StateObject private var viewModel = LoginViewModel()
+    @State private var kakaoService = KakaoLoginService() // KakaoLoginService 인스턴스
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -17,9 +20,17 @@ struct MainLoginView: View {
                     Spacer()
                     InputLoginView()
                     Spacer()
-                    SignUpView()
+                    SignUpView(kakaoService: kakaoService) // 카카오 로그인 서비스 전달
+                }
+                .onAppear {
+                    // 앱 실행 시 자동 로그인 체크
+                    //viewModel.autoLogin()  // 자동 로그인 확인
+                }
+                .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
+                    StarbucksTabView()
                 }
                 .padding()
+                
             }
         }
     }
@@ -81,7 +92,7 @@ struct TitleView: View {
             
             Text("안녕하세요.\n스타벅스입니다.")
                 .font(Font.Pretend.pretendardExtraBold(size: 24))
-    
+
             Spacer().frame(height: 19)
             
             Text("회원 서비스 이용을 위해 로그인 해주세요")
@@ -96,6 +107,8 @@ struct TitleView: View {
 }
 
 struct SignUpView: View {
+    var kakaoService: KakaoLoginService // 카카오 로그인 서비스 전달
+    
     var body: some View {
         NavigationLink(destination: EmailSignupView()) {
             Text("이메일로 회원가입하기")
@@ -108,7 +121,8 @@ struct SignUpView: View {
         Spacer().frame(height: 21)
         
         Button(action: {
-                    print("Hello")
+            // 카카오 로그인 요청
+            kakaoService.requestLogin()
         }, label: {
             Image("kakao_Logo")
             Text("카카오 로그인")
