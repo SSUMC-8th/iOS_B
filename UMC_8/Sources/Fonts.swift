@@ -1,52 +1,53 @@
 //
 //  Fonts.swift
-//  UMC_8
+//  Starbucks
 //
-//  Created by 소민준 on 3/20/25.
+//  Created by 박현규 on 3/19/25.
 //
 
-
+import Foundation
 import SwiftUI
 
 extension Font {
-    enum Pretend: String {
-        case extraBold
-        case bold
-        case semibold
-        case medium
-        case regular
-        case light
-        
-        var value: String {
-            switch self {
-            case .extraBold: return "Pretendard-ExtraBold"
-            case .bold: return "Pretendard-Bold"
-            case .semibold: return "Pretendard-SemiBold"
-            case .medium: return "Pretendard-Medium"
-            case .regular: return "Pretendard-Regular"
-            case .light: return "Pretendard-Light"
-            }
-        }
-    }
-    
-    static func pretend(type: Pretend, size: CGFloat) -> Font {
-        return .custom(type.value, size: size)
-    }
+   enum Pretend: String {
+       case extraBold = "Pretendard-ExtraBold"
+       case bold = "Pretendard-Bold"
+       case semibold = "Pretendard-SemiBold"
+       case medium = "Pretendard-Medium"
+       case regular = "Pretendard-Regular"
+       case light = "Pretendard-Light"
 
-    // MARK: - Main Text Styles
-    static var PretendardExtraBold24: Font { .pretend(type: .extraBold, size: 24) }
-    static var PretendardBold20: Font { .pretend(type: .bold, size: 20) }
-    static var PretendardSemiBold18: Font { .pretend(type: .semibold, size: 18) }
-    static var PretendardMedium16: Font { .pretend(type: .medium, size: 16) }
-    static var PretendardRegular13: Font { .pretend(type: .regular, size: 13) }
-    static var PretendardRegular09: Font { .pretend(type: .regular, size: 9) }
-    static var PretendardRegular18: Font { .pretend(type: .regular, size: 18) }
-    static var PretendardRegular12: Font { .pretend(type: .regular, size: 12) }
-    static var PretendardBold24: Font { .pretend(type: .bold, size: 24) }
-    static var PretendardSemiBold24: Font { .pretend(type: .semibold, size: 24) }
-    static var PretendardSemiBold16: Font { .pretend(type: .semibold, size: 16) }
-    static var PretendardLight14: Font { .pretend(type: .light, size: 14) }
-
-    // MARK: - Button Text Styles
-    static var PretendardMedium18: Font { .pretend(type: .medium, size: 18) }
+       var value: String {
+           return self.rawValue
+       }
+       
+       // 함수로 변경하여 크기 조정 가능하도록 수정
+       static func pretendardBold(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.bold.swiftUIFont(size: size)
+       }
+       
+       static func pretendardLight(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.light.swiftUIFont(size: size)
+       }
+       
+       static func pretendardExtraBold(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.extraBold.swiftUIFont(size: size)
+       }
+       
+       static func pretendardSemiBold(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.semiBold.swiftUIFont(size: size)
+       }
+       
+       static func pretendardMedium(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.medium.swiftUIFont(size: size)
+       }
+       
+       static func pretendardRegular(size: CGFloat) -> Font {
+           return StarbucksFontFamily.Pretendard.regular.swiftUIFont(size: size)
+       }
+   
+   }
 }
+
+
+
